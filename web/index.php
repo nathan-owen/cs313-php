@@ -5,10 +5,11 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    
+  <header>  
 <?php
 include('header.php');
 ?>
+</header>
     <main>
       <div>
         <p class="title">
