@@ -6,10 +6,10 @@
   </head>
   <body>
   <header>  
-<?php
-include('header.php');
-?>
-</header>
+    <?php
+    include('header.php');
+    ?>
+  </header>
     <main>
       <div>
         <p class="title">
