@@ -5,21 +5,10 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="assignments.php">Assignments</a></li>
-          <li class="right"> <a href="#">
-            <?php
-              echo "Server Date: " . date("m/d/Y -- h:ia");
-            ?>
-          </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
+    
+<?php
+include('header.php')
+?>
     <main>
       <div>
         <p class="title">
