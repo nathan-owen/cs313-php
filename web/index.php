@@ -12,7 +12,6 @@
           <li><a href="assignments.php">Assignments</a></li>
           <li class="right"> <a href="#">
             <?php
-            date_default_
               echo "Server Date: " . date("m/d/Y -- h:ia");
             ?>
           </a>
