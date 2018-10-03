@@ -20,6 +20,7 @@
 
             foreach($majors as $major) {
                 echo "<input type='radio' name='major' value='$major'>$major<br>";
+                echo "Sup<br>";
             }
         ?>
 
