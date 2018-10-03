@@ -11,5 +11,7 @@ $email = $_POST['email'];
 $comments = $_POST['comments'];
 
 echo $name;
+echo '\n';
 echo $email;
 echo $comments;
+
