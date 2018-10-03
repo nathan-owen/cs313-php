@@ -12,6 +12,16 @@ $comments = $_POST['comments'];
 $major = $_POST['major'];
 $visitedContinents = $_POST['continents'];
 
+$possibleContinents =
+    array(
+        "NA"=>"North America",
+        "SA"=>"South America",
+        "EU"=>"Europe",
+        "AS"=>"Asia",
+        "AUS"=>"Australia",
+        "AF"=>"Africa",
+        "ANT"=>"Antarctica"
+    );
 echo "<b>User Name:</b> " . $name . '<br>';
 echo "<b>Email: </b><a href='mailto:" . $email . "'>" . $email . "</a><br>";
 echo "<b>Major:</b> " . $major . '<br>';
@@ -24,5 +34,5 @@ if(empty($visitedContinents) )
 }
 
 foreach($visitedContinents as $selected) {
-    echo $selected ."<br>";
+    echo $possibleContinents[$selected];
 }
