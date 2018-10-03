@@ -44,6 +44,8 @@
 
         <p><? echo $name ?></p>
 
+        <p><?$name?></p>
+
 
         <input type="submit" name="submit" value="Submit">
 </form>
