@@ -11,7 +11,7 @@ $email = $_POST['email'];
 $comments = $_POST['comments'];
 $major = $_POST['major'];
 
-echo "User Name: " . $name . '<br>';
-echo "<a href='mailto:" . $email . "'>" . $email . "</a><br>";
-echo "Major: " . $major . '<br>';
-echo "Comments: " . $comments . '<br>';
+echo "<b>User Name:</b> " . $name . '<br>';
+echo "<b>Email: </b><a href='mailto:" . $email . "'>" . $email . "</a><br>";
+echo "<b>Major:</b> " . $major . '<br>';
+echo "<b>Comments:</b> " . $comments . '<br>';
