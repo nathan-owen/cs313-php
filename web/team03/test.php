@@ -18,6 +18,11 @@ echo "<b>Major:</b> " . $major . '<br>';
 echo "<b>Comments:</b> " . $comments . '<br>';
 echo "<b> Visited Continents:</b><br>";
 
+if(empty($visitedContinents) )
+{
+    echo "You gone nowhere<br>";
+}
+
 foreach($visitedContinents as $selected) {
     echo $selected ."<br>";
 }
