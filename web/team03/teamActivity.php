@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +9,25 @@
         Name: <input type="text" name="name"><br>
         Email: <input type="text" name="email"><br>
         Major:<br>
-        <input type="radio" name="major" value="Computer Science">Computer Science<br>
+        <?php
+            $majors =
+                array(
+                    "CS"=>"Computer Science",
+                    "WDD" => "Web Design and Development",
+                    "CIT" => "Computer Information Technology",
+                    "CE"  => "Computer Engineering"
+                );
+
+            foreach($majors as $major) {
+                echo "<input type='radio' name='major' value='$major'>$major<br>";
+            }
+        ?>
+
+        <!--<input type="radio" name="major" value="Computer Science">Computer Science<br>
         <input type="radio" name="major" value="Web Design and Development">Web Design and Development<br>
         <input type="radio" name="major" value="Computer Information Technology">Computer Information Technology<br>
-        <input type="radio" name="major" value="Computer Engineering">Computer Engineering<br>
+        <input type="radio" name="major" value="Computer Engineering">Computer Engineering<br>-->
+
         Comments: <textarea name="comments"></textarea><br>
 
         <input type="checkbox" name="continents[]" value="NA">North America<br>
