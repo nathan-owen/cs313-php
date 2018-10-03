@@ -34,5 +34,5 @@ if(empty($visitedContinents) )
 }
 
 foreach($visitedContinents as $selected) {
-    echo $possibleContinents[$selected];
+    echo $possibleContinents[$selected] . "<br>";
 }
