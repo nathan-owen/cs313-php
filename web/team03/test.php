@@ -9,9 +9,6 @@
 $name = $_POST['name'];
 $email = $_POST['email'];
 $comments = $_POST['comments'];
+$major = $_POST['major'];
 
-echo $name;
-echo '\n';
-echo $email;
-echo $comments;
-
+echo $major;
