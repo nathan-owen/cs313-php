@@ -22,7 +22,6 @@
                 echo "<input type='radio' name='major' value='$major'>$major<br>";
             }
 
-            $name = "MehName";
         ?>
 
         <!--<input type="radio" name="major" value="Computer Science">Computer Science<br>
@@ -40,14 +39,8 @@
          <input type="checkbox" name="continents[]" value="AF">Africa<br>
         <input type="checkbox" name="continents[]" value="ANT">Antarctica<br>
 
-        <p><?=$name ?></p>
-
-        <p><? echo $name ?></p>
-
-        <p><?$name?></p>
-
-
         <input type="submit" name="submit" value="Submit">
+
 </form>
 </body>
 </html>

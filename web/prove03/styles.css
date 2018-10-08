@@ -1,0 +1,170 @@
+/* All Styles Live Here */
+
+body{
+    margin: 0;
+    background:#333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+    margin: auto;
+    width: 90%;
+    background: white;
+    height:100%;
+    padding: 0px 15px;
+    overflow: auto;
+}
+ul {
+background-color: #000066;
+list-style-type: none;
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+
+li{
+    float:left;
+    color:white;
+}
+
+.right {
+    float:right;
+}
+
+li a,.logo{
+    text-decoration: none;
+    color:white;
+    display:block;
+    text-align: center;
+    padding: 20px 16px;
+}
+
+li a:not(.logo):hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #0000cc;
+}
+
+
+
+.button {
+    background-color: #000066;
+    border:none;
+    color:white;
+    padding: 20px 16px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0000cc;
+}
+
+.itemsLayout{
+    margin: 0;
+    text-align: center;
+
+}
+
+.item {
+    padding: 10px;
+    width:150px;
+    display: inline-block;
+    text-decoration: none;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.itemThumb{
+    width: 85%;
+    align-content: center;
+}
+
+.itemName {
+    font-size: 10pt;
+
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration-color: black;
+}
+
+.itemPrice {
+    font-size: 15px;
+    margin: 0;
+}
+
+#itemDetailName {
+    font-size: 20pt;
+}
+
+#itemDetailPrice {
+    font-size: 15pt;
+    margin-top: 5px;
+}
+#itemDescription {
+}
+
+
+
+#detailInfo{
+    width: 55%;
+    display: inline-block;
+    position: relative;
+    left: 25%;
+    padding-top: 15px;
+}
+#detailImage {
+    width: 250px;
+    display: inline-block;
+}
+
+#productDetails {
+    width: 50%;
+    padding-bottom: 7.5%;
+    margin: 0 auto;
+}
+
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+
+#cart {
+    padding: 15px;
+}
+#message {
+    text-align: center;
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+}
