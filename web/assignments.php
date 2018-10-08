@@ -16,7 +16,11 @@
           Assignments
         </p>
         <p>
-          This part of the site is coming very soon!
+          <ul>
+              <li>
+                  <a href="prove03/index.php">Prove 03 (Shopping Cart)</a>
+              </li>
+          </ul>
         </p>
       </div>
     </main>
