@@ -1,0 +1,83 @@
+/* All Styles Live Here */
+
+body{
+    margin: 0;
+    background:#333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+    margin: auto;
+    width: 90%;
+    background: white;
+    height:100%;
+    padding: 0 15;
+}
+ul {
+background-color: #000066;
+list-style-type: none;
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+
+li{
+    float:left;
+    color:white;
+}
+
+.right {
+    float:right;
+}
+
+li a{
+    text-decoration: none;
+    color:white;
+    display:block;
+    text-align: center;
+    padding: 20px 16px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #0000cc;
+}
+
+.title {
+    padding-top: 25pt;
+    margin: 0;
+    font-size: 17pt;
+    text-align: center;
+}
+
+.me {
+    float: left;
+    padding: 5 15;
+    width: 25%;
+}
+
+button {
+    background-color: #000066;
+    border:none;
+    color:white;
+    padding: 20px 16px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0000cc;
+}
+
+.yes {
+    color:green;
+}
+
+.no {
+    color: red;
+}
