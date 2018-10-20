@@ -27,7 +27,7 @@ $db = connectToDatabase();
             echo '<tbody>';
             foreach ($results as $ticket) {
                 echo '<tr>';
-                echo "<td>$ticket['title']</td>";
+                echo "<td>" . $ticket['title'] . "</td>";
                 echo '</tr>';
             }
             echo '</tbody>';
