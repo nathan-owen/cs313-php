@@ -6,6 +6,7 @@
  * Time: 5:41 PM
  */
 
+date_default_timezone_set('UTC');
 function connectToDatabase()
 {
     try {
