@@ -27,7 +27,13 @@ $db = connectToDatabase();
             echo '<tbody>';
             foreach ($results as $ticket) {
                 echo '<tr>';
-                echo "<td>" . $ticket['title'] . "</td>";
+                echo "<td><a href='request.php?id=" . $ticket['id'] . "'>" . $ticket['title'] . "</a></td>";
+                echo "<td>" . $ticket['dateSubmitted'] . "</td>";
+                echo "<td>" . $ticket['requestor'] . "</td>";
+                echo "<td>" . $ticket['state'] . "</td>";
+                echo "<td>" . $ticket['status'] . "</td>";
+                echo "<td>" . $ticket['approvedBy'] . "</td>";
+                echo "<td>" . $ticket['dateUpdated'] . "</td>";
                 echo '</tr>';
             }
             echo '</tbody>';
