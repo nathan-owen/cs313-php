@@ -15,8 +15,11 @@ $db = connectToDatabase();
 <h3>Open Change Requests</h3>
     <?php
         $statement = $db->query("
-          SELECT tickets.id, title, dateSubmitted, users.name, state, status, approvedBy, dateUpdated FROM tickets
-           JOIN users ON users.id = tickets.requestor WHERE status = 'Open'");
+          SELECT tickets.id, title, dateSubmitted, users.name AS requestor, 
+            state, status, approvedBy, dateUpdated 
+          FROM tickets
+          JOIN users ON users.id = tickets.requestor 
+          WHERE status = 'Open'");
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
         if(count($results) > 0)
         {
