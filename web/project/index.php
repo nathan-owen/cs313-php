@@ -15,7 +15,7 @@ $db = connectToDatabase();
 <h3>Open Change Requests</h3>
     <?php
         $statement = $db->query("
-          SELECT tickets.id, title, dateSubmitted, users.name AS requestor, 
+          SELECT tickets.id, title, to_char(current_timestamp,'HH12:MI:SS') as dateSubmitted, users.name AS requestor, 
             state, status, approvedBy, dateUpdated 
           FROM tickets
           JOIN users ON users.id = tickets.requestor 
