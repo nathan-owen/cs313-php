@@ -17,10 +17,11 @@ $db = connectToDatabase();
     <?php
         $statement = $db->query("
           SELECT tickets.id, title, datesubmitted, users.name AS requestor, 
-            state, status, approvedby, dateupdated 
+            state, status, (SELECT name FROM users WHERE id = tickets.approvedby) AS approvedby, dateupdated 
           FROM tickets
           JOIN users ON users.id = tickets.requestor 
-          WHERE status = 'Open'");
+          WHERE status = 'Open'
+          ORDER BY datesubmitted DESC");
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
         if(count($results) > 0)
         {
