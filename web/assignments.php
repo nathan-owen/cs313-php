@@ -20,6 +20,9 @@
               <li>
                   <a href="prove03/index.php">Prove 03 (Shopping Cart)</a>
               </li>
+              <li>
+                  <a href="project/index.php">Project</a>
+              </li>
           </ul>
         </p>
       </div>
