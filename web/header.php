@@ -1,6 +1,6 @@
 <?php
 echo '
-<nav>
+<nav class="menu">
   <ul>
     <li class="active"><a href="index.php">Home</a></li>
     <li><a href="assignments.php">Assignments</a></li>
