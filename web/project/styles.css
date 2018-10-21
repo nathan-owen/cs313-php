@@ -168,3 +168,7 @@ input[type=text], input[type=number] {
     border: 2px solid black;
     border-radius: 4px;
 }
+
+#requestsLayout {
+    margin:25px;
+}

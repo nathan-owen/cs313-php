@@ -12,6 +12,7 @@ $db = connectToDatabase();
 <body>
 <?php include 'header.php';?>
 <main>
+    <div id="requestsLayout">
 <h3>Open Change Requests</h3>
     <?php
         $statement = $db->query("
@@ -45,6 +46,7 @@ $db = connectToDatabase();
             echo '</table>';
         }
     ?>
+    </div>
 </main>
 </body>
 </html>
