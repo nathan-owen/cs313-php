@@ -1,9 +1,6 @@
 <?php
 session_start();
-$_SESSION['userId'] = 1;
-$_SESSION['username'] = 'nathanowen';
-$_SESSION['usersName'] = 'Nathan Owen';
-$_SESSION['isAdmin'] = true;
+require 'redirect.php';
 require 'db.php';
 $db = connectToDatabase();
 ?>
@@ -18,6 +15,7 @@ $db = connectToDatabase();
 <?php include 'header.php';?>
 <main>
     <div id="requestsLayout">
+        <h3>Welcome <?=$_SESSION['usersName'];?></h3>
 <h3>Open Change Requests</h3>
         <button id="newRequestButton" onclick="window.location = 'newRequest.php'">Submit New Request</button>
     <?php

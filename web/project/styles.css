@@ -166,7 +166,7 @@ table#t01 th {
     text-align: center;
 }
 
-input[type=text], input[type=number] ,textarea, select{
+input[type=text], input[type=number] ,textarea, select, input[type=password]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -186,4 +186,10 @@ textarea {
 
 #requestsLayout {
     margin:25px;
+}
+
+#signIn
+{
+    width: 50%;
+    margin: auto;
 }

@@ -1,5 +1,7 @@
 <?php
 session_start();
+require 'redirect.php';
+
 require 'db.php';
 
 

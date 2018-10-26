@@ -1,5 +1,7 @@
 <?php
 session_start();
+require 'redirect.php';
+
 require 'db.php';
 $db = connectToDatabase();
 if($_SERVER['REQUEST_METHOD'] == 'GET')
@@ -54,7 +56,7 @@ function sanitize($data)
         <button class="button" onclick="window.history.back();">Back</button>
     <?php
         echo '<h3>' . $ticket['title'] . '</h3>';
-        echo '<form method="POST" action="updateRequest.php"><fieldset ' . (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] ? '' : 'disabled') . '>';
+        echo '<form method="POST" action="updateRequest.php"><fieldset ' . ((isset($_SESSION['usersName']) && $_SESSION['usersName'] == $ticket['requestor']) || (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']) ? '' : 'disabled') . '>';
             echo '<table>';
             echo '<tbody>';
                 echo '<input type="hidden" name="id" value="' . $ticketID . '">';
@@ -88,7 +90,7 @@ function sanitize($data)
                         echo '>' . $status . '</option>';
                     }
                 echo "</select></td></tr>";
-                echo "<tr><td>Approved By:</td><td><select name='approvedBy'>";
+                echo "<tr><td>Approved By:</td><td><select ". (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']  ? '' : 'disabled') . " name='approvedBy'>";
                 //Loop through eligible approvers and build the select list.
                 echo '<option value="NONE"></option>';
                 foreach (getApprovers($db) as $approver)
@@ -107,7 +109,7 @@ function sanitize($data)
                 echo "<tr><td>Date Last Updated</td><td>" . date('m/d/y h:i a', strtotime($ticket['dateupdated'])) . "</td></tr>";
             echo '</tbody>';
             echo '</table>';
-            if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'])
+            if((isset($_SESSION['usersName']) && $_SESSION['usersName'] == $ticket['requestor']) || (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']) )
             {
                 echo '<input class="button" type="submit" value="Update Request">';
             }
