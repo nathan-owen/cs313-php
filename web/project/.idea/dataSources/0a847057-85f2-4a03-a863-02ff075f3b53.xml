@@ -74,8 +74,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-10-20.18:28:34.234</IntrospectionTimestamp>
-      <IntrospectionStateNumber>560</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-25.19:07:29.344</IntrospectionTimestamp>
+      <IntrospectionStateNumber>573</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -273,13 +273,15 @@
     <column id="43" parent="25" name="state">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>559</StateNumber>
+      <StateNumber>572</StateNumber>
+      <DefaultExpression>&apos;Waiting for Review&apos;::character varying</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
     <column id="44" parent="25" name="status">
       <Position>9</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>559</StateNumber>
+      <StateNumber>573</StateNumber>
+      <DefaultExpression>&apos;Open&apos;::character varying</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
     <column id="45" parent="25" name="approvedby">

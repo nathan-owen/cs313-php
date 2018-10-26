@@ -21,6 +21,9 @@ margin: 0;
 padding: 0;
 }
 
+fieldset{
+    border:none;
+}
 li{
     float:left;
     color:white;
@@ -47,20 +50,23 @@ li a:not(.logo):hover {
 }
 
 
-
-.button {
+#newRequestButton {
+    margin: 1%;
+}
+button, .button {
     background-color: #000066;
     border:none;
     color:white;
-    padding: 20px 16px;
+    padding: 10px 10px;
     text-align: center;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     display: inline-block;
     cursor: pointer;
+    margin: 1% 0% 1% 0%;
 }
 
-button:hover{
+button:hover, .button:hover{
     background-color: #0000cc;
 }
 
@@ -160,13 +166,22 @@ table#t01 th {
     text-align: center;
 }
 
-input[type=text], input[type=number] {
+input[type=text], input[type=number] ,textarea, select{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+select{
+    width: 25%;
+}
+textarea {
+    padding: 8px;
 }
 
 #requestsLayout {
