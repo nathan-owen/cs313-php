@@ -3,6 +3,20 @@ session_start();
 require 'redirect.php';
 require 'db.php';
 $db = connectToDatabase();
+$status = 'Open';
+$oppStat = 'Closed';
+if($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if(isset($_GET['status'])) {
+        $status = filter_var($_GET['status'],FILTER_SANITIZE_STRING);
+    } else {
+        $status = 'Open';
+    }
+}
+
+if($status === 'Open')
+    $oppStat = 'Closed';
+else
+    $oppStat = 'Open';
 ?>
 
 <!DOCTYPE HTML>
@@ -18,14 +32,18 @@ $db = connectToDatabase();
         <h3>Welcome <?=$_SESSION['usersName'];?></h3>
 <h3>Open Change Requests</h3>
         <button id="newRequestButton" onclick="window.location = 'newRequest.php'">Submit New Request</button>
-    <?php
-        $statement = $db->query("
+        <button id="viewClosed" onclick="window.location = 'dashboard.php?status=<?php echo $oppStat;?>'">View <?php echo $oppStat?> Requests</button>
+
+        <?php
+        $statement = $db->prepare("
           SELECT tickets.id, title, datesubmitted, users.name AS requestor, 
             state, status, (SELECT name FROM users WHERE id = tickets.approvedby) AS approvedby, dateupdated 
           FROM tickets
           JOIN users ON users.id = tickets.requestor 
-          WHERE status = 'Open'
+          WHERE status = :status
           ORDER BY datesubmitted DESC");
+    $statement->bindValue(':status',$status,PDO::PARAM_STR);
+    $statement->execute();
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
         if(count($results) > 0)
         {
